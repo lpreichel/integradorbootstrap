@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>integrador bootstrap</title>
+    <link rel="stylesheet" href="style.css">
+    <script rel="text/javascript" src="tickets.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="js/bootstrap.min.js">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+<style>
+ .label {
+          width: 30%;
+          /* float: left;  */
+          background-color: bisque;
+          color: mediumorchid;
+          border-radius: 0.5rem;
+          box-shadow: 0.25rem 0.25rem .5 darkblue;
+      }
+</style>
+  
+</head>
+<body>
+  <main class="container-fluid  vw-100 h-auto" >
+    <header class="col-12 ">
+      
+   
+      <nav class="navbar navbar-expand-md  navbar-dark "  style="background-color:#343A40; font-size: 1rem; ">
+        <div class="container-fluid">
+        <a class="navbar-brand " style="width: 40%; padding-left: 5%;"  href="https://www.buenosaires.gob.ar/educacion/codo-codo">
+          <img src="imagenes/codoacodo.png" alt="Logo" width="90" height="60" style="font-size:1.5rem;" class="d-inline-block align-text-center">
+          Conf Bs As
+        </a>
+        <a class="navbar-brand blanco d-flex" style=" text-align:center; width: 20%; font-size: 20px;" href="index.html">La Conferencia</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-target="#collapsibleNavbar"  aria-controls="navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent" style="text-align: right;  width: 40%;" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Los oradores</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">El lugar y la fecha</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Conviertete en orador</a>
+            </li>  
+            <li class="nav-item">
+                <a class="nav-link " href="#tickets.html" style="color:#198754">Comprar tickets</a>
+              </li>   
+          </ul>
+        </div>
+      </div>  
+      </nav>
+</header>
+
+<div class="row row-cols-1 row-cols-md-3 g-4 " style="width: 60%; margin-left: 20%; ">
+  <div class="col-sm-6">
+    <div class="card border-primary rounded-0" style="margin: 15px 0px;  ">
+      <div class="card-body " style="text-align: center;">
+        <h5 class="card-title ">Estudiante</h5>
+        <p class="card-text">Tiene un descuento</p>
+        <p class="card-text"><strong>80%</strong></p>
+        <p class="card-text"><small>*presentar documentacion</small></p>
+       
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card rounded-0" style="border-color: green;margin: 15px 0px;">
+      <div class="card-body" style="text-align: center;">
+        <h5 class="card-title">Trainee</h5>
+        <p class="card-text">Tiene un descuento</p>
+        <p class="card-text"><strong>50%</strong></p>
+        <p class="card-text"><small>*presentar documentacion</small></p>
+       
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card border-warning rounded-0" style=" margin: 15px 0px;">
+      <div class="card-body" style="text-align: center;">
+        <h5 class="card-title">Junior</h5>
+        <p class="card-text">Tiene un descuento</p>
+        <p class="card-text"><strong>15%</strong></p>
+        <p class="card-text"><small>*presentar documentacion</small></p>
+       
+      </div>
+    </div>
+  </div>
+</div>
+
+
+     
+
+    <p style="text-align: center; margin-bottom: 0; font-size: 10px; margin-top: 1%;">VENTA </p>
+    <h2 class='fs-4' style="text-align: center; padding: 0; margin-top: 0;">VALOR DE TICKETS $200</h2> 
+
+      <form style="width: 60%; margin-left: 20%;  " target="_blank" id="formulario"  name="form-tickets" >
+        <!-- action="destino.html"  -->
+        <div class="col w-100">
+          <div class="row   " >
+         
+            <div class=" col-sm-12 col-md-6 ">
+             
+              <input id="nombre" type="text" name="nombre" class="form-control " placeholder="Nombre" aria-label="nombre" onblur="validarnombre()" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$">
+              <label id="mensaje" style="width: auto;" ></label>
+            </div>
+            <div class=" col-sm-12 col-md-6 ">
+              <input id="apellido" type="text" name="apellido" class="form-control " placeholder="Apellido" aria-label="apellido" onblur="validarapellido()" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" >
+              <label id="mensaje2" ></label>
+            </div>
+       
+          </div>
+      </div>
+        <div class="col form-text   ">
+          <input id="email" type="text" class="form-control" placeholder="Correo" aria-label="email" onblur="validaremail()"  >
+          <label id="mensaje3"></label>
+        </div>
+        <div>
+
+          <div class="row">
+            <div class="col-sm-12 col-md-6 ">
+              <div  class="form-text " style="color: black;" >
+                Cantidad.
+              </div>
+              <input id="cantidad" type="number" class="form-control form-text"  aria-label="cantidad" >
+              <label id="mensaje4"></label>
+            </div>
+            <div class="col-sm-12 col-md-6">
+              <div  class="form-text " style="color: black;" >
+                Categoria.
+              </div>
+
+              <select id="categoria" class="form-select"  style="margin: 4px;">
+                <!-- aria-label="Default select example" -->
+                <option value=""></option>
+                <option value="0.2">Estudiante</option>
+                <option value="0.5">Trainee</option>
+                <option value="0.85">Junior</option>
+              </select>
+              <label id="mensaje5"></label>
+              
+               
+            </div>
+          </div>
+        </div>
+        <div class="col w-100">
+          <div class="row   " >
+         
+            <div class=" col-sm-12 ">
+              <input id="total" type="text" class="form-control " placeholder="Total a pagar" aria-label="First name" style="background-color: #CCE5FF;border-color:#CCE5FF ;" onblur="validarcategoria()">
+            </div>
+            
+       
+          </div>
+          
+          <div class="col w-100 " >
+           <div class="row p-0 ">
+            <div class="col-sm-12 col-md-6">
+              <button class="btn btn-primary w-100" style="background-color: #96C93E;border: #96C93E ; margin: 1% 0 1% 0; " type="button" onclick="ponercero()">Borrar</button>
+            </div>
+            <div class="col-sm-12 col-md-6">
+              <button class="btn btn-primary w-100 " style="background-color: #96C93E;border: #96C93E; margin: 1% 0 1% 0; " type="button"  onclick="validacion() " >Resumen</button>
+              <!-- value="enviar" -->
+            </div>
+            </div>
+          </div>
+         
+         
+          </form>
+
+
+   
+    
+    <footer class=" col-12">
+      <nav class="navbar navbar-expand-md  navbar-dark " style="background-color: #1E4860;  text-align: right; width: 100%;">
+       <div class="container-fluid">
+        <a class="navbar-brand blanco" href="#"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-target="#collapsibleNavbar" aria-controls="navbarNav" aria-expanded="false" aria-label="Toglle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Contactanos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Prensa</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Conferencias</a>
+            </li>  
+            <li class="nav-item">
+                <a class="nav-link " href="#" >Terminos y condiciones</a>
+              </li>  
+              <li class="nav-item">
+                <a class="nav-link " href="#">Privacidad</a>
+              </li>  
+              <li class="nav-item">
+                <a class="nav-link " href="#" >Estudiantes</a>
+              </li>  
+          </ul>
+        </div>  
+      </div>
+      </nav>
+    </footer>
+  </main> 
+
+ 
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+</body>
+</html>
+  
