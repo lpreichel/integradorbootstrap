@@ -89,9 +89,9 @@ function validaremail(){
 function total()
 {
   let cant = document.getElementById("cantidad").value;
-  console.log(cant);
+  
   cant = cant * document.getElementById('categoria').value *200;
-  console.log(cant);
+ 
   document.getElementById("total").value = (`Total a pagar $ ${cant}`);
 
 }
@@ -118,4 +118,5 @@ function ponercero()
  document.getElementById("cantidad").value="";
  document.getElementById("categoria").value="";
  document.getElementsByTagName('label').value="";
+ document.getElementById("total").value ="Total a pagar $";
 }
