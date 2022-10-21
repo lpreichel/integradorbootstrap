@@ -35,22 +35,22 @@ function validarapellido(){
 function validarcantidad(){
     
     valor = Number(document.getElementById("cantidad").value) ;
+    console.log(valor);
             
-    if( isNaN(valor) ) 
-    {
-        document.getElementById('mensaje4').innerHTML = "ingrese la cantidad";
-        limpiar();
-        return false;
-    }
-    else    
-    {
-        if( valor < 0 || valor > 50 ) 
+    // if( isNaN(valor) ) 
+    // {
+    //     document.getElementById('mensaje4').innerHTML = "ingrese la cantidad";
+    //     limpiar();
+    //     return false;
+    // }
+    // else    
+    // {
+        if( valor <= 0 || valor > 50  || valor == null) 
         {
             document.getElementById('mensaje4').innerHTML = "la cantidad debe ser mayor a 0 y menor de 50";
-            limpiar();
             return false;
         }
-    }
+    // }
     document.getElementById('mensaje4').innerHTML = "";
     return true;          
 }
