@@ -17,7 +17,7 @@ function validarnombre(){
 function validarapellido(){
     valor = document.getElementById('apellido').value;
     
-    if( valor == null || valor.length == 0  )
+    if( valor == null || valor.length == 0 )
     {
         
         document.getElementById('mensaje2').innerHTML = "Tenes que completar el Apellido!";
@@ -37,14 +37,7 @@ function validarcantidad(){
     valor = Number(document.getElementById("cantidad").value) ;
     console.log(valor);
             
-    // if( isNaN(valor) ) 
-    // {
-    //     document.getElementById('mensaje4').innerHTML = "ingrese la cantidad";
-    //     limpiar();
-    //     return false;
-    // }
-    // else    
-    // {
+    
         if( valor <= 0 || valor > 50  || valor == null) 
         {
             document.getElementById('mensaje4').innerHTML = "la cantidad debe ser mayor a 0 y menor de 50";
@@ -119,4 +112,5 @@ function ponercero()
  document.getElementById("categoria").value="";
  document.getElementsByTagName('label').value="";
  document.getElementById("total").value ="Total a pagar $";
+ document.getElementById("nombre").focus;
 }
